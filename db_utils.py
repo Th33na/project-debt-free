@@ -77,6 +77,22 @@ def get_transaction_for_user(engine, user_id):
     
     return df
 
+def get_transaction_for_user_year(engine, user_id, year):
+    """
+    Retrieves transaction for a user
+    """
+    query = """
+    SELECT *
+    FROM transaction_data
+    WHERE user_id = :user_id
+    AND transaction_date between :start and :end
+    """
+    
+    start_date = year + '-01-01 00:00'
+    end_date = year + '-12-31 23:59'
+    df = pd.read_sql(query, engine, params={"user_id": user_id, "start": start_date, "end": end_date})
+    
+    return df
 
 def get_transaction_for_user_card(engine, user_id, card):
     """
