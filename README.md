@@ -2,8 +2,8 @@
 
 ## Technologies
 
-## Python
-![Python Logo](python.png)
+## Python 
+![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png)
 
 # Contributors
 
