@@ -1,5 +1,9 @@
 # project-debt-free
 
+## Technologies
+
+## Python
+![Python Logo](python logo.png)
 
 # Contributors
 
