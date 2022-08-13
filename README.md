@@ -3,7 +3,7 @@
 ## Technologies
 
 ## Python
-![Python Logo](python logo.png)
+![Python Logo](pythonlogo.png)
 
 # Contributors
 
