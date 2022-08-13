@@ -40,7 +40,7 @@ def get_cc_utilization_plot_for_user_for_cards(user_id, year, month=None, card=N
         title= title,
         rot=90,
         xlabel="Merchant Category Code",
-        hover_cols=['mcc', 'amount', 'description'])
+        hover_cols=['mcc', 'amount', 'description']).opts(plot=dict(tools=[hover]))
     return plot
 
 def get_cc_utilization_plots_for_user_per_card(user_id, year, month=None):
@@ -78,7 +78,7 @@ def get_cc_utilization_plots_for_user_per_card(user_id, year, month=None):
             x='description',
             title= title,
             xlabel="Merchant Category",
-            hover_cols=['amount', 'description'])
+            hover_cols=['amount', 'description']).opts(plot=dict(tools=[hover]))
         
         
         plot_list.append(plot)
