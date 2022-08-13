@@ -3,7 +3,7 @@
 ## Technologies
 
 ## Python 
-![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) ![Numpy Logo](Numpy.png)
+![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) 
 
 # Contributors
 
