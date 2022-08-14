@@ -19,11 +19,14 @@ This project utilizes a lot of different add ons, please make sure you have all 
 
 * [sqlalchemy v1.4.32](https://github.com/sqlalchemy/sqlalchemy) - For running SQL operations for the database.
 
+* [Holoviews](https://holoviews.org/) - For streamlit data visulization
 
 * [lru_cache] (From functools import lru_cache) - For access to values
 
+
+
 ![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) ![Numpy Logo](Numpy.png) 
-![Mat Plot Logo](matplotlib.png) ![Pandas Logo](Pandas.png)
+![Mat Plot Logo](matplotlib.png) ![Pandas Logo](Pandas.png) ![HoloView Logo](HoloViews.png)
 
 
 ## Installation
