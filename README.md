@@ -17,6 +17,9 @@ This project utilizes a lot of different add ons, please make sure you have all 
 
 * [Matplotlib 4.0](https://matplotlib.org/) - For plotting graphs and charts that appear below the code.
 
+* [sqlalchemy v1.4.32](https://github.com/sqlalchemy/sqlalchemy) - For running SQL operations for the database.
+
+
 * [lru_cache] (From functools import lru_cache) - For access to values
 
 ![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) ![Numpy Logo](Numpy.png) 
