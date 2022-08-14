@@ -1,4 +1,9 @@
 # Project-Debt-Free
+Project Debt Free is a debt solution application that provides our customers with a platform to keep all of
+their credit card balances in check. We assist them in determining their debt and aiding them with debt management.
+Debt solution simplified , with options to suit every customers needs. Our product is not only for the individual but 
+can be a valuable asset to a bankers list of resources to aid their customers as well providing invaluable data.
+
 
 ## Technologies
 
@@ -27,6 +32,25 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Questio
 $ pip install questionary
 ✨🎂✨
 ```
+
+# Future Upgrades
+* Customer side:
+   Connect debtors with bank plans that help them
+   Consolidating your debt to lower interest payments
+   Alerts when nearing your limit
+   Fraud detection
+   Possible overspending points
+   Monthly bill planning to assist with payment plans
+   Credit score tracking/impact
+
+* Banker side:
+   Locate late/delinquent payments and offer assistance
+   Help customers set spending goals
+   Work with customers to help raise their credit score
+   Work with small businesses
+
+* Small Business side:
+   Track expenses to help manage overhead
 
 # Contributors
 
