@@ -35,22 +35,22 @@ $ pip install questionary
 
 # Future Upgrades
 * Customer side:
-   Connect debtors with bank plans that help them
-   Consolidating your debt to lower interest payments
-   Alerts when nearing your limit
-   Fraud detection
-   Possible overspending points
-   Monthly bill planning to assist with payment plans
-   Credit score tracking/impact
+   -Connect debtors with bank plans that help them
+   -Consolidating your debt to lower interest payments
+   -Alerts when nearing your limit
+   -Fraud detection
+   -Possible overspending points
+   -Monthly bill planning to assist with payment plans
+   -Credit score tracking/impact
 
 * Banker side:
-   Locate late/delinquent payments and offer assistance
-   Help customers set spending goals
-   Work with customers to help raise their credit score
-   Work with small businesses
+   -Locate late/delinquent payments and offer assistance
+   -Help customers set spending goals
+   -Work with customers to help raise their credit score
+   -Work with small businesses
 
 * Small Business side:
-   Track expenses to help manage overhead
+   -Track expenses to help manage overhead
 
 # Contributors
 
