@@ -6,6 +6,11 @@ hv.extension('bokeh', logo=False)
 
 MONTHS = ['01', '02','03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
 
+st.set_page_config(
+    page_title="User Credit Utilization Breakdown (Month)",
+    page_icon="📊",   
+)
+
 def display_plot(user_id):
     if 'year' in st.session_state:
         year = st.session_state["year"]
@@ -21,7 +26,7 @@ if 'user_id' in st.session_state:
 
     if user_id != "BANK":
 
-        st.write("Hello, User " + str(user_id) + "!!! Please select a year and month you want to see")
+        st.write("Hello, User " + str(user_id) + "!!! Please select a year and month you want to see.")
 
         available_years = get_available_txn_years(user_id=user_id)
         year = st.radio("Year Selection", available_years, horizontal=True)

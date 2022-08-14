@@ -26,6 +26,7 @@ def get_debt_free_db_engine(db_connection_string=DB_CONNECTION_STRING):
     engine = create_engine(db_connection_string)
     return engine
 
+@lru_cache(maxsize=10)
 def get_all_table_names(engine=None):
     """
         Retrieves all table names in the DB
@@ -62,6 +63,7 @@ def get_all_data_from_mcc_type(engine=None):
     
     return df
 
+@lru_cache(maxsize=10)
 def get_all_data_from_txn_data(engine=None):
     """
         Retrieves all transaction data
@@ -83,6 +85,7 @@ def get_all_data_from_txn_data(engine=None):
     
     return df
 
+@lru_cache(maxsize=10)
 def get_available_txn_years(engine=None, user_id=None):
     """
         Retrieves the years with available transaction data given user_id (optional)
@@ -106,6 +109,7 @@ def get_available_txn_years(engine=None, user_id=None):
 
     return df
 
+@lru_cache(maxsize=10)
 def get_all_data_from_account(engine=None):
     """
         Retrieves all accounts data
@@ -127,7 +131,7 @@ def get_all_data_from_account(engine=None):
     
     return df
 
-
+@lru_cache(maxsize=10)
 def get_all_data_from_account_holder(engine):
     """
         Retrieves all account holder data
@@ -149,6 +153,7 @@ def get_all_data_from_account_holder(engine):
     
     return df
 
+@lru_cache(maxsize=10)
 def get_account_holder(user_id, engine=None):
     """
         Retrieves account holder data
@@ -171,6 +176,7 @@ def get_account_holder(user_id, engine=None):
     
     return df
 
+@lru_cache(maxsize=10)
 def get_all_data_from_merchant(engine):
     """
         Retrieves all merchant data
@@ -216,7 +222,7 @@ def get_account_for_user(engine=None, user_id=None):
     
     return df    
 
-
+@lru_cache(maxsize=10)
 def get_transactions_for_user(engine, user_id, year=None, month=None, card=None):
     """
         Retrieves transaction for a user + year + month + card combination when applicable
@@ -299,6 +305,7 @@ def get_relevant_transactions(user_id=None, year=None, month=None, card=None):
 
     return all_user_txn
 
+@lru_cache(maxsize=10)
 def get_year_month_string(year, month=None):
     """
         Build the start and end date parameters given the year and month parameters
