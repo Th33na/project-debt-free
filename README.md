@@ -1,5 +1,61 @@
-# project-debt-free
+# Project-Debt-Free
+Project Debt Free is a debt solution application that provides our customers with a platform to keep all of
+their credit card balances in check. We assist them in determining their debt and aiding them with debt management.
+Debt solution simplified , with options to suit every customers needs. Our product is not only for the individual but 
+can be a valuable asset to a bankers list of resources to aid their customers as well providing invaluable data.
 
+
+## Technologies
+
+This project utilizes a lot of different add ons, please make sure you have all these and they are up to date:
+
+* [JupyterLab 3.4.4](https://jupyter.org/) - For the notebook creation and running of the code.
+
+* [pandas 1.4.3](https://github.com/pandas-dev/pandas/blob/main/README.md) - For reading the csv files and other operations.
+
+* [numpy](https://https://numpy.org/) - Loaded in, not used in the framework, but could be used in future editions.
+
+* [hvplot v0.8.0](https://github.com/holoviz/hvplot#readme) - For creating interactive and more detailed plots.
+
+* [fire](https://github.com/google/python-fire) - For the command line interface, help page, and entrypoint.
+
+* [questionary](https://github.com/tmbo/questionary) - For interactive user prompts and dialogs
+
+ 
+![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) ![Numpy Logo](Numpy.png) 
+![HV Plot Logo](hvplot.png) ![Pandas Logo](Pandas.png)
+
+## Tools
+```bash
+from functools import lru_cache
+```
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Questionary:
+```bash
+$ pip install questionary
+✨🎂✨
+```
+
+# Future Upgrades
+* Customer side:
+   -Connect debtors with bank plans that help them
+   -Consolidating your debt to lower interest payments
+   -Alerts when nearing your limit
+   -Fraud detection
+   -Possible overspending points
+   -Monthly bill planning to assist with payment plans
+   -Credit score tracking/impact
+
+* Banker side:
+   -Locate late/delinquent payments and offer assistance
+   -Help customers set spending goals
+   -Work with customers to help raise their credit score
+   -Work with small businesses
+
+* Small Business side:
+   -Track expenses to help manage overhead
 
 # Contributors
 
@@ -7,4 +63,4 @@
 - Agnes Maria
 - Nayana Narayanan
 - Matthew Stream
-- Hugo Velazquez
+- Hugo Velazquez 
