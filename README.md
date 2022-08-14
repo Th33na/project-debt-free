@@ -15,20 +15,16 @@ This project utilizes a lot of different add ons, please make sure you have all 
 
 * [numpy](https://https://numpy.org/) - Loaded in, not used in the framework, but could be used in future editions.
 
-* [hvplot v0.8.0](https://github.com/holoviz/hvplot#readme) - For creating interactive and more detailed plots.
+* [Matplotlib 4.0](https://matplotlib.org/) - For plotting graphs and charts that appear below the code.
 
-* [fire](https://github.com/google/python-fire) - For the command line interface, help page, and entrypoint.
+* [sqlalchemy v1.4.32](https://github.com/sqlalchemy/sqlalchemy) - For running SQL operations for the database.
 
-* [questionary](https://github.com/tmbo/questionary) - For interactive user prompts and dialogs
 
- 
+* [lru_cache] (From functools import lru_cache) - For access to values
+
 ![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) ![Numpy Logo](Numpy.png) 
-![HV Plot Logo](hvplot.png) ![Pandas Logo](Pandas.png)
+![Mat Plot Logo](matplotlib.png) ![Pandas Logo](Pandas.png)
 
-## Tools
-```bash
-from functools import lru_cache
-```
 
 ## Installation
 
@@ -37,6 +33,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Questio
 $ pip install questionary
 ✨🎂✨
 ```
+
 
 # Future Upgrades
 * Customer side:
@@ -64,3 +61,6 @@ $ pip install questionary
 - Nayana Narayanan
 - Matthew Stream
 - Hugo Velazquez 
+
+# License
+MIT
