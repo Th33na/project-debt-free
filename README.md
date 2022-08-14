@@ -20,6 +20,10 @@ This project utilizes a lot of different add ons, please make sure you have all 
 ![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) ![Numpy Logo](Numpy.png) 
 ![HV Plot Logo](hvplot.png) ![Pandas Logo](Pandas.png)
 
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Questionary:
+
 # Contributors
 
 - Theena Dang
