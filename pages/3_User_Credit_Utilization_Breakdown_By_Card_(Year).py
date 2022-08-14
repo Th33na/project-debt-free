@@ -4,6 +4,11 @@ from utils.db_utils import get_available_txn_years
 import holoviews as hv
 hv.extension('bokeh', logo=False)
 
+st.set_page_config(
+    page_title="User Credit Utilization Breakdown",
+    page_icon="📊",   
+)
+
 def display_plot(user_id):
     if 'year' in st.session_state:
         year = st.session_state["year"]
@@ -18,7 +23,7 @@ if 'user_id' in st.session_state:
 
     if user_id != "BANK":
 
-        st.write("Hello, User " + str(user_id) + "!!! Please select a year you want to see")
+        st.write("Hello, User " + str(user_id) + "!!! Please select a year you want to see.")
 
         available_years = get_available_txn_years(user_id=user_id)
         year = st.radio("Year Selection", available_years, horizontal=True)
