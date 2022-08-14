@@ -17,7 +17,7 @@ This project utilizes a lot of different add ons, please make sure you have all 
 
 * [Matplotlib 4.0](https://matplotlib.org/) - For plotting graphs and charts that appear below the code.
 
-* [lru_cache] - For access to values
+* [lru_cache] (From functools impoprt lru_cache) - For access to values
 
 ![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) ![Numpy Logo](Numpy.png) 
 ![Mat Plot Logo](matplotlib.png) ![Pandas Logo](Pandas.png)
