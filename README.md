@@ -23,6 +23,10 @@ This project utilizes a lot of different add ons, please make sure you have all 
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Questionary:
+```bash
+$ pip install questionary
+✨🎂✨
+```
 
 # Contributors
 
