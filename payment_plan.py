@@ -58,7 +58,7 @@ def payment_plan(user):
             print("You will be returned to the main menu.")
     
     
-    def payment_plan_option(total, time):
+def payment_plan_option(total, time):
     # Reads in the total and the time and applies the APR to calculate the amount they will need to pay to be debt free by chosen time.
     APR = 0.05 / 12
     
