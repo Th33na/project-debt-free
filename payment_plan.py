@@ -27,31 +27,20 @@ def payment_plan(user):
 
         if choice == "6 Months":
             payment_time = 6
-            payment_amount = payment_plan_option(sumofdebt, payment_time)
-            
-            print(f"Your payment amount would be ${payment_amount} over {payment_time} months.")
-            cli_running = payment_works()
+            cli_running = payment_plan_option(sumofdebt, payment_time)
                 
         elif choice == "1 Year":
             payment_time = 12
-            payment_amount = payment_plan_option(sumofdebt, payment_time)
+            cli_running = payment_plan_option(sumofdebt, payment_time)
             
-            print(f"Your payment amount would be ${payment_amount} over {payment_time} months.")
-            cli_running = payment_works()
             
         elif choice == "3 Year":
             payment_time = 36
-            payment_amount = payment_plan_option(sumofdebt, payment_time)
-            
-            print(f"Your payment amount would be ${payment_amount} over {payment_time} months.")
-            cli_running = payment_works()
+            cli_running = payment_plan_option(sumofdebt, payment_time)
             
         elif choice == "5 Year":
             payment_time = 60
-            payment_amount = payment_plan_option(sumofdebt, payment_time)
-            
-            print(f"Your payment amount would be ${payment_amount} over {payment_time} months.")
-            cli_running = payment_works()
+            cli_running = payment_plan_option(sumofdebt, payment_time)
         
         elif choice == "Quit":
             cli_running = False
@@ -63,8 +52,10 @@ def payment_plan_option(total, time):
     APR = 0.05 / 12
     
     payment = total * ((APR*(pow((1+APR), time)))/(pow((1 + APR), time) - 1))
+    print(f"Your payment amount would be ${payment_amount} over {payment_time} months.")
+    cli_running = payment_works()
 
-    return payment
+    return cli_running
 
 def payment_works():
     # Checks if the customer is happy with their plan.
