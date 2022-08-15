@@ -15,6 +15,7 @@ This project utilizes a lot of different add ons, please make sure you have all 
 
 * [numpy](https://https://numpy.org/) - Loaded in, not used in the framework, but could be used in future editions.
 
+<<<<<<< HEAD
 * [hvplot v0.8.0](https://github.com/holoviz/hvplot#readme) - For creating interactive and more detailed plots.
 
 * [fire](https://github.com/google/python-fire) - For the command line interface, help page, and entrypoint.
@@ -29,6 +30,18 @@ This project utilizes a lot of different add ons, please make sure you have all 
 ```bash
 from functools import lru_cache
 ```
+=======
+* [Matplotlib 4.0](https://matplotlib.org/) - For plotting graphs and charts that appear below the code.
+
+* [sqlalchemy v1.4.32](https://github.com/sqlalchemy/sqlalchemy) - For running SQL operations for the database.
+
+
+* [lru_cache] (From functools import lru_cache) - For access to values
+
+![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) ![Numpy Logo](Numpy.png) 
+![Mat Plot Logo](matplotlib.png) ![Pandas Logo](Pandas.png)
+
+>>>>>>> cc7c68901846e80f346e0b9e424ac6d99fd7e741
 
 ## Installation
 
@@ -38,6 +51,10 @@ $ pip install questionary
 ✨🎂✨
 ```
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cc7c68901846e80f346e0b9e424ac6d99fd7e741
 # Future Upgrades
 * Customer side:
    -Connect debtors with bank plans that help them
@@ -64,3 +81,9 @@ $ pip install questionary
 - Nayana Narayanan
 - Matthew Stream
 - Hugo Velazquez 
+<<<<<<< HEAD
+=======
+
+# License
+MIT
+>>>>>>> cc7c68901846e80f346e0b9e424ac6d99fd7e741
