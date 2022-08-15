@@ -67,4 +67,4 @@ pip install streamlit-multipage==0.0.14
 - Hugo Velazquez 
 
 # License
-MIT
+[MIT](license)
