@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_multipage import MultiPage
 
 from utils.auth_utils import login
 
@@ -24,18 +23,17 @@ if user_id:
         else:
             st.write("Please select a flow")
             if user_id.upper() == 'BANK':
-                st.session_state["user_id"] = "BANK"
                 st.sidebar.success("Select a BANK DEMO above.")
             else:
                 st.sidebar.success("Select a USER DEMO above.")
 else:
-    del(st.session_state["user_id"])
+    del(st.session_state.user_id)
 
 st.markdown("")
 st.markdown("")
 st.markdown("***")
 st.markdown("HINTS:")
-st.markdown("  For User Flow, use 0-39.")
+st.markdown("  For User Flow, use 0-49.")
 st.markdown("  For Bank Flow, use BANK.")
 
 
