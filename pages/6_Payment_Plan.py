@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from db_utils import get_debt_free_db_engine, get_transaction_for_user_year
+from utils.db_utils import get_debt_free_db_engine, get_transaction_for_user_year
 
 st.set_page_config(
     page_title="Debt Free Payment Plan",
