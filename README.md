@@ -21,21 +21,20 @@ This project utilizes a lot of different add ons, please make sure you have all 
 
 * [Holoviews](https://holoviews.org/) - For streamlit data visulization
 
+* [hvplot v0.8.0](https://github.com/holoviz/hvplot#readme) - For creating interactive and more detailed plots.
+
 * [lru_cache] (From functools import lru_cache) - For access to values
 
 
 
 ![Python Logo](images/python.png) ![JupyterLab Logo](images/jupyterlab.png) ![Numpy Logo](images/Numpy.png) 
-![Mat Plot Logo](images/matplotlib.png) ![Pandas Logo](images/Pandas.png) ![HoloView Logo](images/HoloViews.png)
+![Mat Plot Logo](images/matplotlib.png) ![Pandas Logo](images/Pandas.png) ![HoloView Logo](images/HoloViews.png) 
+![hv plot logo](images/hvplot.png)
 
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Questionary:
-```bash
-$ pip install questionary
-✨🎂✨
-```
+
 ```bash
 pip install streamlit-multipage==0.0.14
 ```
