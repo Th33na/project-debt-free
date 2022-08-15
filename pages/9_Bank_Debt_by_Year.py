@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from utils.db_utils import get_transactions_for_all_users
+from utils.db_utils import get_relevant_transactions
 import holoviews as hv
 hv.extension('bokeh', logo=False)
 
@@ -12,7 +12,7 @@ def display_plot(year):
     if 'year' in st.session_state:
         year = st.session_state["year"]
 
-        plot = get_transactions_for_all_users(engine=None, year=year)
+        plot = get_relevant_transactions(year=year)
         st.bokeh_chart(hv.render(plot, backend="bokeh"))
         st.session_state["user_id"] = user_id
 
