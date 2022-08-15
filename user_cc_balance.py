@@ -3,6 +3,7 @@ import pandas as pd
 from utils.db_utils import get_account_for_user, get_relevant_transactions
 from common.common import get_total_amount_by_group
 
+
 def get_apr_for_card(user_id, card):
     """"
     Gets the Annual Percent Rate for a given user's credit card from database
