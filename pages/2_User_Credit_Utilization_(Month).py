@@ -16,8 +16,11 @@ def display_plot(user_id):
         year = st.session_state["year"]
         month = st.session_state["month"]
         plot = get_cc_utilization_plot_for_user_for_cards(user_id, year, month=month)
-        st.bokeh_chart(hv.render(plot, backend="bokeh"))
-        st.session_state["user_id"] = user_id
+        if plot:
+            st.bokeh_chart(hv.render(plot, backend="bokeh"))
+        else:
+            st.write("Sorry, No available data")
+    st.session_state["user_id"] = user_id
 
 if 'user_id' in st.session_state:
     user_id = st.session_state["user_id"]
