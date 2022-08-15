@@ -2,10 +2,12 @@ import pandas as pd
 import streamlit as st
 from db_utils import get_debt_free_db_engine, get_transaction_for_user_year
 
+# Generates payment plan to show how long it takes to pay off their debt
 st.set_page_config(
     page_title="Debt Free 5.5% Interest Payment Plan",
     page_icon="📊") 
-    
+
+# Calculation function with 5.5 percent interest per month    
 def payment_projection(debt, payment):
     # Reads in the debt and payment choice and returns the time and the last payment.
     APR = 0.055 / 12
@@ -14,12 +16,11 @@ def payment_projection(debt, payment):
     while debt > payment:
         counter += 1
         debt = ((debt - payment) * APR) + (debt - payment)
-        st.write(debt)
-
+        
     final_payment = debt
     return counter, final_payment
 
-
+# Calculation of the total debt amount from 2019
 def sum_of_debt(user_id):
     
     engine = get_debt_free_db_engine()
@@ -27,6 +28,7 @@ def sum_of_debt(user_id):
     sumofdebt = transaction_2019["amount"].sum()
     return(sumofdebt)
 
+# Streamlit User interface with output of the result based on user's input
 if 'user_id' in st.session_state:
     user_id = st.session_state["user_id"]
 
