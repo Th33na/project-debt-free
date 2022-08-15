@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from db_utils import get_debt_free_db_engine, get_transaction_for_user_year
+from utils.db_utils import get_relevant_transactions
 
 # Generates payment plan to show how long it takes to pay off their debt
 st.set_page_config(
@@ -23,8 +23,7 @@ def payment_projection(debt, payment):
 # Calculation of the total debt amount from 2019
 def sum_of_debt(user_id):
     
-    engine = get_debt_free_db_engine()
-    transaction_2019 = get_transaction_for_user_year(engine, user_id, '2019')
+    transaction_2019 = get_relevant_transactions(user_id=user_id, year='2019')
     sumofdebt = transaction_2019["amount"].sum()
     return(sumofdebt)
 
@@ -37,7 +36,7 @@ if 'user_id' in st.session_state:
         payment_amount = 0
         debt = sum_of_debt(user_id)
         time = 0
-        st.write(f"Hello, {user_id}, you have chosen to pay off your debt with your own payment amount.")
+        st.write(f"Hello, {user_id}, you have chosen to pay off your 2019 debt with your own payment amount.")
         st.write(f"Your current total debt is ${debt: .2f}.")
         st.write("We currently have an APR on our payment plan of 5.5% with this option.")
         user_amount = st.text_input("Amount you wish to pay monthly:", "0.00")
