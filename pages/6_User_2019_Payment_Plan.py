@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from db_utils import get_debt_free_db_engine, get_transaction_for_user_year
+from utils.db_utils import get_relevant_transactions
 
 st.set_page_config(
     page_title="Debt Free Payment Plan",
@@ -15,8 +15,7 @@ def payment_plan_option(total, time):
 
 def sum_of_debt(user_id):
     
-    engine = get_debt_free_db_engine()
-    transaction_2019 = get_transaction_for_user_year(engine, user_id, '2019')
+    transaction_2019 = get_relevant_transactions(user_id=user_id, year='2019')
     sumofdebt = transaction_2019["amount"].sum()
     return(sumofdebt)
 
