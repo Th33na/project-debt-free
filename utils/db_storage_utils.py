@@ -214,6 +214,7 @@ def build_account_data(cc_info_df):
 def random_ceiling_on_cc_limit(limit_row):
     """"
     Randomizes the available credit and rounding the value to the nearest 100
+    This shouldn't be necessary in the future, when we have actual live data from user or bank
     input:
         - limit_row: cc info dataframe
     output:
@@ -226,6 +227,7 @@ def random_ceiling_on_cc_limit(limit_row):
 def random_apr(limit_row):
     """"
     Randomizes the apr
+    This shouldn't be necessary in the future, when we have actual live data from user or bank
     input:
         - limit_row: row in cc info dataframe
     output:

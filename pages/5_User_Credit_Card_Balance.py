@@ -28,6 +28,6 @@ if 'user_id' in st.session_state:
 
     else:
         st.write("Please use the BANK DEMO")
-        st.session_state["user_id"] = user_id
+    st.session_state["user_id"] = user_id
 else:
     st.write("Please login to use the app")

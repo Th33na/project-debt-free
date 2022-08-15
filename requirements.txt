@@ -1,0 +1,7 @@
+sqlalchemy
+pandas
+numpy
+bokeh
+hvplot
+streamlit
+streamlit-multipage
