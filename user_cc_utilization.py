@@ -30,18 +30,20 @@ def get_cc_utilization_plot_for_user_for_cards(user_id, year, month=None, card=N
 
     title = f'Overall Card spendings for {year_month}'
 
-    hover = HoverTool(tooltips=[("amount", "@amount{8.2f}"),
-                                ("description", "@description"),
-                                ("mcc", "@mcc")
-                           ])
-    plot = merged_txn.hvplot.bar(
-        y='amount',
-        x='mcc',
-        title= title,
-        rot=90,
-        xlabel="Merchant Category Code",
-        hover_cols=['mcc', 'amount', 'description']).opts(plot=dict(tools=[hover]))
-    return plot
+    if len(merged_txn) > 0:
+        hover = HoverTool(tooltips=[("amount", "@amount{8.2f}"),
+                                    ("description", "@description"),
+                                    ("mcc", "@mcc")
+                               ])
+        plot = merged_txn.hvplot.bar(
+            y='amount',
+            x='mcc',
+            title= title,
+            rot=90,
+            xlabel="Merchant Category Code",
+            hover_cols=['mcc', 'amount', 'description']).opts(plot=dict(tools=[hover]))
+        return plot
+    return None
 
 def get_cc_utilization_plots_for_user_per_card(user_id, year, month=None):
     """
@@ -57,31 +59,32 @@ def get_cc_utilization_plots_for_user_per_card(user_id, year, month=None):
     
     txn = get_relevant_transactions(user_id=user_id, year=year, month=month)
     grouped_txn = get_total_amount_by_group(txn, ["mcc", "card"])
-        
+    
     merged_txn = merge_transactions_with_mcc_group(grouped_txn)
     
     year_month = year + "-" + month if month else year
 
     plot_list = []
 
-    for card_num in sorted(merged_txn['card'].unique()):
-        card_txn = merged_txn[merged_txn["card"] == card_num]
+    if len(merged_txn) > 0:
+        for card_num in sorted(merged_txn['card'].unique()):
+            card_txn = merged_txn[merged_txn["card"] == card_num]
 
-        title = f'Card {card_num} spendings for {year_month}'
+            title = f'Card {card_num} spendings for {year_month}'
 
 
-        hover = HoverTool(tooltips=[("amount", "@amount{8.2f}"),
-                                    ("description", "@description")
-                               ])
-        plot = card_txn.hvplot.barh(
-            y='amount',
-            x='description',
-            title= title,
-            xlabel="Merchant Category",
-            hover_cols=['amount', 'description']).opts(plot=dict(tools=[hover]))
-        
-        
-        plot_list.append(plot)
+            hover = HoverTool(tooltips=[("amount", "@amount{8.2f}"),
+                                        ("description", "@description")
+                                   ])
+            plot = card_txn.hvplot.barh(
+                y='amount',
+                x='description',
+                title= title,
+                xlabel="Merchant Category",
+                hover_cols=['amount', 'description']).opts(plot=dict(tools=[hover]))
+
+
+            plot_list.append(plot)
 
     
     return plot_list
