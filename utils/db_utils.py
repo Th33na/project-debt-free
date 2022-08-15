@@ -200,7 +200,7 @@ def get_all_data_from_merchant(engine):
 
 def get_account_for_user(engine=None, user_id=None):
     """
-        Retrieves all transaction data
+        Retrieves all accounts data for user
     input: 
         engine: (optional) db connection
         user_id: user id
@@ -330,3 +330,16 @@ def get_year_month_string(year, month=None):
     end_date = end_year + "-" + end_month + END_DAY
         
     return (start_date, end_date)
+
+@lru_cache(maxsize=10)
+def get_available_cards(user_id, year):
+    """
+    Gets the cards available to the current user.
+    input:
+        user_id: BigInt user id
+    output:
+        list of cards for the given user
+    """
+    account_data = get_relevant_transactions(user_id=user_id, year=year)
+    cards = account_data['card'].unique()
+    return cards
