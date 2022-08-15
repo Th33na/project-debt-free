@@ -3,7 +3,5 @@ pandas
 numpy
 bokeh
 hvplot
-pathlib
-random
 streamlit
 streamlit-multipage
