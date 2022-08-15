@@ -6,8 +6,7 @@ hv.extension('bokeh', logo=False)
 
 st.set_page_config(
     page_title="User Credit Utilization Breakdown",
-    page_icon="📊",   
-)
+    page_icon="📊")
 
 def display_plot(user_id):
     if 'year' in st.session_state:
@@ -33,6 +32,7 @@ if 'user_id' in st.session_state:
 
     else:
         st.write("Please use the BANK DEMO")
+        st.session_state["user_id"] = user_id
 else:
     st.write("Please login to use the app")
 
