@@ -10,14 +10,14 @@ def payment_plan_option(total, time):
     # Reads in the total and the time and applies the APR to calculate the amount they will need to pay to be debt free by chosen time.
     APR = 0.05 / 12
     payment = total * ((APR*(pow((1.0 + APR), time)))/(pow((1.0 + APR), time) - 1.0))
-    st.header(f"Your payment amount would be ${payment: .2f} over {time} months.")
+    return(payment)
+    
 
 def sum_of_debt(user_id):
     
     engine = get_debt_free_db_engine()
     transaction_2019 = get_transaction_for_user_year(engine, user_id, '2019')
     sumofdebt = transaction_2019["amount"].sum()
-
     return(sumofdebt)
 
 if 'user_id' in st.session_state:
@@ -36,22 +36,22 @@ if 'user_id' in st.session_state:
         with col1:
             if st.button("6 Months"):
                 time = 6
-                payment_plan_option(debt, time)
                 
         with col2:
             if st.button("1 Year"):
                 time = 12
-                payment_plan_option(debt, time)
                 
         with col3:
             if st.button("3 Years"):
                 time = 36
-                payment_plan_option(debt, time)
                 
         with col4:
             if st.button("5 Years"):
                 time = 60
-                payment_plan_option(debt, time)
+
+        if time > 0:
+            payment = payment_plan_option(debt, time)
+            st.header(f"Your payment amount would be ${payment: .2f} over {time} months.")
 
         st.session_state["user_id"] = user_id
 
