@@ -25,8 +25,8 @@ This project utilizes a lot of different add ons, please make sure you have all 
 
 
 
-![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) ![Numpy Logo](Numpy.png) 
-![Mat Plot Logo](matplotlib.png) ![Pandas Logo](Pandas.png) ![HoloView Logo](HoloViews.png)
+![Python Logo](images/python.png) ![JupyterLab Logo](images/jupyterlab.png) ![Numpy Logo](images/Numpy.png) 
+![Mat Plot Logo](images/matplotlib.png) ![Pandas Logo](images/Pandas.png) ![HoloView Logo](images/HoloViews.png)
 
 
 ## Installation
