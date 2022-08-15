@@ -66,25 +66,5 @@ def get_cc_balance_user_for_cards(user_id, year, month, card):
     grouped_txn = get_total_amount_by_group(txn, ['user_id','card'])
     annual_percent_rate = get_apr_for_card(user_id=user_id,card=card)
     summary_transactions = grouped_txn.apply(lambda row: calc_new_balance(row,annual_percent_rate), axis =1)
-    st.session_state["user_id"] = user_id
-    return summary_transactions
-
-
-
-
-    """
-    Generates the Credit Card Balance for a year + month + card of user's transactions
-    input: 
-        user_id: BigInt user id
-        year: String year in YYYY format
-        month: String in MM format
-        card: Card Number
-    ouput:
-        dataframe of minimum payment, interest charged and new balance for given user, card, month and year combination
-    """
-    txn = get_relevant_transactions(user_id=user_id, year=year, month=month, card=card)
-    grouped_txn = get_total_amount_by_group(txn, ['user_id','card'])
-    annual_percent_rate = get_apr_for_card(user_id=user_id,card=card)
-    summary_transactions = grouped_txn.apply(lambda row: calc_new_balance(row,annual_percent_rate), axis =1)
     
     return summary_transactions
