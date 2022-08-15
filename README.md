@@ -15,27 +15,28 @@ This project utilizes a lot of different add ons, please make sure you have all 
 
 * [numpy](https://https://numpy.org/) - Loaded in, not used in the framework, but could be used in future editions.
 
+* [Matplotlib 4.0](https://matplotlib.org/) - For plotting graphs and charts that appear below the code.
+
+* [sqlalchemy v1.4.32](https://github.com/sqlalchemy/sqlalchemy) - For running SQL operations for the database.
+
+* [Holoviews](https://holoviews.org/) - For streamlit data visulization
+
 * [hvplot v0.8.0](https://github.com/holoviz/hvplot#readme) - For creating interactive and more detailed plots.
 
-* [fire](https://github.com/google/python-fire) - For the command line interface, help page, and entrypoint.
+* [lru_cache] (From functools import lru_cache) - For access to values
 
-* [questionary](https://github.com/tmbo/questionary) - For interactive user prompts and dialogs
 
- 
-![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) ![Numpy Logo](Numpy.png) 
-![HV Plot Logo](hvplot.png) ![Pandas Logo](Pandas.png)
 
-## Tools
-```bash
-from functools import lru_cache
-```
+![Python Logo](images/python.png) ![JupyterLab Logo](images/jupyterlab.png) ![Numpy Logo](images/Numpy.png) 
+![Mat Plot Logo](images/matplotlib.png) ![Pandas Logo](images/Pandas.png) ![HoloView Logo](images/HoloViews.png) 
+![hv plot logo](images/hvplot.png)
+
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Questionary:
+
 ```bash
-$ pip install questionary
-✨🎂✨
+pip install streamlit-multipage==0.0.14
 ```
 
 # Future Upgrades
@@ -64,3 +65,6 @@ $ pip install questionary
 - Nayana Narayanan
 - Matthew Stream
 - Hugo Velazquez 
+
+# License
+[MIT](license)
