@@ -267,9 +267,6 @@ def get_transactions_for_all_users(engine, year=None, month=None):
         dataframe containing all the charges        
     """
 
-    if engine is None:
-        engine = get_debt_free_db_engine()
-
     query = """
         SELECT *
         FROM transaction_data
