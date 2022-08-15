@@ -32,13 +32,14 @@ if 'user_id' in st.session_state:
         year = st.radio("Year Selection", available_years, horizontal=True)
         st.session_state["year"] = year
 
-        month = st.radio("Year Selection", MONTHS, horizontal=True)
+        month = st.radio("Month Selection", MONTHS, horizontal=True)
         st.session_state["month"] = month
         display_plot(user_id)
 
 
     else:
         st.write("Please use the BANK DEMO")
+        st.session_state["user_id"] = user_id
 else:
     st.write("Please login to use the app")
 
