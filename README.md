@@ -16,6 +16,7 @@ This project utilizes a lot of different add ons, please make sure you have all 
 * [numpy](https://https://numpy.org/) - Loaded in, not used in the framework, but could be used in future editions.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 * [hvplot v0.8.0](https://github.com/holoviz/hvplot#readme) - For creating interactive and more detailed plots.
 
 * [fire](https://github.com/google/python-fire) - For the command line interface, help page, and entrypoint.
@@ -31,10 +32,13 @@ This project utilizes a lot of different add ons, please make sure you have all 
 from functools import lru_cache
 ```
 =======
+=======
+>>>>>>> b436f20f17c8fa5c35a52c790cb0f6a333586d06
 * [Matplotlib 4.0](https://matplotlib.org/) - For plotting graphs and charts that appear below the code.
 
 * [sqlalchemy v1.4.32](https://github.com/sqlalchemy/sqlalchemy) - For running SQL operations for the database.
 
+<<<<<<< HEAD
 
 * [lru_cache] (From functools import lru_cache) - For access to values
 
@@ -42,6 +46,17 @@ from functools import lru_cache
 ![Mat Plot Logo](matplotlib.png) ![Pandas Logo](Pandas.png)
 
 >>>>>>> cc7c68901846e80f346e0b9e424ac6d99fd7e741
+=======
+* [Holoviews](https://holoviews.org/) - For streamlit data visulization
+
+* [lru_cache] (From functools import lru_cache) - For access to values
+
+
+
+![Python Logo](python.png) ![JupyterLab Logo](jupyterlab.png) ![Numpy Logo](Numpy.png) 
+![Mat Plot Logo](matplotlib.png) ![Pandas Logo](Pandas.png) ![HoloView Logo](HoloViews.png)
+
+>>>>>>> b436f20f17c8fa5c35a52c790cb0f6a333586d06
 
 ## Installation
 
@@ -50,11 +65,18 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Questio
 $ pip install questionary
 ✨🎂✨
 ```
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> cc7c68901846e80f346e0b9e424ac6d99fd7e741
+=======
+```bash
+pip install streamlit-multipage==0.0.14
+```
+
+>>>>>>> b436f20f17c8fa5c35a52c790cb0f6a333586d06
 # Future Upgrades
 * Customer side:
    -Connect debtors with bank plans that help them
@@ -82,8 +104,14 @@ $ pip install questionary
 - Matthew Stream
 - Hugo Velazquez 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 # License
 MIT
 >>>>>>> cc7c68901846e80f346e0b9e424ac6d99fd7e741
+=======
+
+# License
+MIT
+>>>>>>> b436f20f17c8fa5c35a52c790cb0f6a333586d06
